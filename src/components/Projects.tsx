@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, Calendar, Code, Database, Smartphone, Globe } from 'lucide-react';
+import { Github, Calendar, Code, Database, Smartphone, Globe } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -149,8 +149,8 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex space-x-3">
+                  {/* Action Button - Only GitHub */}
+                  <div className="flex">
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -158,12 +158,8 @@ const Projects = () => {
                       className={`flex items-center space-x-2 px-4 py-2 ${colors.bg} text-white rounded-lg hover:opacity-90 transition-opacity text-sm font-medium`}
                     >
                       <Github size={16} />
-                      <span>Code</span>
+                      <span>Voir le Code</span>
                     </a>
-                    <button className={`flex items-center space-x-2 px-4 py-2 border-2 ${colors.border} ${colors.text} rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium`}>
-                      <ExternalLink size={16} />
-                      <span>Demo</span>
-                    </button>
                   </div>
                 </div>
               </div>
