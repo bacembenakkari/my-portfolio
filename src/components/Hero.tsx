@@ -17,6 +17,7 @@ const Hero = () => {
     link.click();
     document.body.removeChild(link);
   };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white">
       {/* Background Pattern */}
@@ -25,9 +26,9 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Profile Image */}
-        <div className="mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl">
+        {/* Profile Image - Positioned lower to align with Education/Experience */}
+        <div className="mb-8 mt-16">
+          <div className="w-40 h-40 mx-auto rounded-full overflow-hidden shadow-2xl">
             <img 
               src={bacemImg} 
               alt="Bacem Ben Akkari" 
@@ -41,41 +42,40 @@ const Hero = () => {
           Bacem Ben Akkari
         </h1>
         
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-light mb-8 text-blue-100">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-light mb-6 text-blue-100">
           Ingénieur Logiciel
         </h2>
 
-        <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-blue-50">
+        <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed text-blue-50">
           Ingénieur web et mobile junior, spécialisé dans le développement d'applications 
-          réactives et performantes. Expérimenté avec des frameworks modernes tels que 
-          Spring Boot, Angular, React et React Native.
+          réactives et performantes. Expérimenté avec des frameworks modernes.
         </p>
 
-        {/* Contact Info */}
-        <div className="flex flex-wrap justify-center items-center gap-6 mb-12 text-blue-100">
+        {/* Contact Info - Minimized */}
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-8 text-blue-100 text-sm">
           <div className="flex items-center space-x-2">
-            <Mail size={18} />
+            <Mail size={16} />
             <span>bacem.benakkari@polytechnicien.tn</span>
           </div>
           <div className="flex items-center space-x-2">
-            <MapPin size={18} />
+            <MapPin size={16} />
             <span>Sousse, Tunisie</span>
           </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* CTA Buttons - Minimized */}
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm"
           >
             Me Contacter
           </button>
           <button 
             onClick={handleCVDownload}
-            className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 flex items-center space-x-2"
+            className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 flex items-center space-x-2 text-sm"
           >
-            <Download size={18} />
+            <Download size={16} />
             <span>Télécharger CV</span>
           </button>
         </div>
@@ -89,7 +89,7 @@ const Hero = () => {
         </button>
       </div>
     </section>
-  )
+  );
 };
 
 export default Hero;
