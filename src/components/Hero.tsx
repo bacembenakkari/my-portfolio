@@ -11,7 +11,7 @@ const Hero = () => {
   const handleCVDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/my_cv.pdf';
+    link.href = '/CV_Bacem_Ben Akkari.pdf';
     link.download = 'Bacem-Ben-Akkari-CV.pdf';
     document.body.appendChild(link);
     link.click();
